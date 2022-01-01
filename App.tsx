@@ -82,7 +82,7 @@ const App = (initialValues: Props) => {
         }
       });
       const result =
-        valueCoinFrom * values.amount + valueCoinTo * values.amount;
+        valueCoinFrom * valueCoinTo * values.amount;
       console.log(result);
       setConvert(result);
     },
