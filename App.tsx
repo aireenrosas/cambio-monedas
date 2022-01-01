@@ -50,11 +50,10 @@ const App = (initialValues: Props) => {
         const responseJson = await response.json();
         const resultCoins = [];
         const resultCoinValues = [];
-        //todo: use map
-        for (var i in responseJson.rates) {
+        responseJson.rates.map(i => {
           resultCoins.push(i);
           resultCoinValues.push([i, responseJson.rates[i]]);
-        }
+        });
         setCoins(resultCoins);
         setCoinsValues(resultCoinValues);
       } catch (error) {
